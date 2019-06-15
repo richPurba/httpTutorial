@@ -10,12 +10,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class RestClient {
-    public static final String PATH = "x-ray/resources/hits";
+    public static final String PATH = "app/resources/hits";
     private InetAddress inetAddress;
     private int port;
     private String path;
     private static final Logger logger = Logger.getLogger(RestClient.class.getName());
-    public static final String HEADER_NAME_PREFIX = "x-ray_";
+    public static final String HEADER_NAME_PREFIX = "app_";
     private static final int TIMEOUT = 1000;
 
     public RestClient(String hostname, int port, String path){ //constructor overloading
@@ -68,7 +68,7 @@ public class RestClient {
             }
             return stringWriter.toString();
         }catch(Exception e){
-            logger.log(Level.SEVERE,"Problem communicating with x-ray services...");
+            logger.log(Level.SEVERE,"Problem communicating with app services...");
             return "-_-";
         }
         finally {

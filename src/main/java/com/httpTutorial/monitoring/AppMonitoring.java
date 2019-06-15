@@ -7,31 +7,31 @@ public class AppMonitoring implements AppMonitoringMbean {
 
     @Override
     public int getNumberOfRejectedJobs() {
-        return HTTPRestRequestInterceptor.getNumberOfRejectedThreads(); //TODO : to be completed from HTTPRestRequestInterceptor
+        return HTTPRestRequestInterceptor.getNumberOfRejectedThreads();
     }
 
     @Override
     public long getAppPerformance() {
-        return 0;//TODO : to be completed from HTTPRestRequestInterceptor
+        return HTTPRestRequestInterceptor.getAppPerformance();
     }
 
     @Override
     public long getWorstAppPerformance() {
-        return 0;//TODO : to be completed from HTTPRestRequestInterceptor
+        return HTTPRestRequestInterceptor.getTheWorstAppPerformance();
     }
 
     @Override
     public long getSystemPerformance() {
-        return 0;//TODO : to be completed from HTTPRestRequestInterceptor
+        return HTTPRestRequestInterceptor.getSystemPerformance();
     }
 
     @Override
     public long getWorstSystemPerformance() {
-        return 0;//TODO : to be completed from HTTPRestRequestInterceptor
+        return HTTPRestRequestInterceptor.getTheWorstSystemPerformance();
     }
 
     @Override
     public void reset() {
-        //TODO : to be completed from HTTPRestRequestInterceptor
+        HTTPRestRequestInterceptor.resetStatistic();
     }
 }
